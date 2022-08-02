@@ -27,6 +27,9 @@ class Word {
 
   // implement the guessLetter function:
   // guessLetter(letter) {}
+  guessLetter() {
+    this.letter = letter
+  }
 
   // implement the updateScreen function:
   // updateScreen() {}
