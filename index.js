@@ -27,18 +27,27 @@ class Word {
 
   // implement the guessLetter function:
   // guessLetter(letter) {}
-  guessLetter() {
-    this.letter = letter
+  guessLetter(letter) {
+    console.log(letter)
   }
 
   // implement the updateScreen function:
   // updateScreen() {}
+  updateScreen() {
+    console.log(this.word)
+  }
 
   // implement the isGameOver function:
   // isGameOver() {}
+  isGameOver() {
+
+  }
 
   // implement the getWinOrLoss function:
   // getWinOrLoss() {}
+  getWinOrLoss() {
+
+  }
 }
 
 function newGame() {
