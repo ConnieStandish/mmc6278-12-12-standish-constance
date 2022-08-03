@@ -40,6 +40,7 @@ class Word {
   // implement the isGameOver function:
   // isGameOver() {}
   isGameOver() {
+    console.log(this.word)
 
   }
 
