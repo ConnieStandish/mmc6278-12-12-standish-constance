@@ -26,21 +26,25 @@ class Word {
   }
 
   // implement the guessLetter function:
-  // guessLetter(letter) {}
   guessLetter(letter) {
-    console.log(letter)
+    if(this.word.includes(letter)) {
+      this.correctLetters.push(letter)
+      let wordGuessArr = this.word.split("")
+      for (let i = 0; i < wordGuessArr.length; i++) {
+        if (wordGuessArr[i] === letter) {}
+        
+      }
+    }
   }
 
   // implement the updateScreen function:
   // updateScreen() {}
   updateScreen() {
-    console.log(this.word)
   }
 
   // implement the isGameOver function:
   // isGameOver() {}
   isGameOver() {
-    console.log(this.word)
 
   }
 
