@@ -1,15 +1,15 @@
 const words = [
   'bananas',
-  // 'grapes',
-  // 'carousel',
-  // 'milkshake',
-  // 'javascript',
-  // 'limousine',
-  // 'chocolate',
-  // 'programming',
-  // 'meatloaf',
-  // 'ukulele',
-  // 'mango'
+  'grapes',
+  'carousel',
+  'milkshake',
+  'javascript',
+  'limousine',
+  'chocolate',
+  'programming',
+  'meatloaf',
+  'ukulele',
+  'mango'
 ]
 
 let wins = 0
@@ -55,11 +55,11 @@ class Word {
   // implement the updateScreen function:
   updateScreen() {
     let wordToGuess = document.getElementById('word-to-guess')
-    wordToGuess.textContent = this.displayWord
+    wordToGuess.innerHTML = this.displayWord
     let wordsLeft = document.getElementById('remaining-guesses')
-    wordsLeft.textContent = this.remainingGuesses
+    wordsLeft.innerHTML = this.remainingGuesses
     let wrongGuess = document.getElementById('incorrect-letters')
-    wrongGuess.textContent = this.incorrectLetters
+    wrongGuess.innerHTML = this.incorrectLetters
   }
 
   // implement the isGameOver function:
@@ -71,9 +71,14 @@ class Word {
   }
 
   // implement the getWinOrLoss function:
-  // getWinOrLoss() {}
   getWinOrLoss() {
-
+    if (this.displayWord === this.word && this.remainingGuesses > 0) {
+      return 'win'
+    }
+    if (!currentWord.isGameOver() && this.remainingGuesses > 0) {
+      return null
+    }
+    return 'loss'
   }
 }
 
