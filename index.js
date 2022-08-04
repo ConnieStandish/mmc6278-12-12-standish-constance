@@ -31,9 +31,14 @@ class Word {
       this.correctLetters.push(letter)
       let wordGuessArr = this.word.split("")
       for (let i = 0; i < wordGuessArr.length; i++) {
-        if (wordGuessArr[i] === letter) {}
-        
+        if (wordGuessArr[i] === letter) {
+          this.replaceUnderscores(i, letter)
+        }
       }
+    }
+    if (!this.word.includes(letter)) {
+      this.incorrectLetters.push(letter)
+      this.remainingGuesses--
     }
   }
 
