@@ -36,7 +36,7 @@ class Word {
         }
       }
     }
-    if (!this.word.includes(letter)) {
+    if (!this.word.includes(letter) && !this.incorrectLetters.includes(letter)) {
       this.incorrectLetters.push(letter)
       this.remainingGuesses--
     }
