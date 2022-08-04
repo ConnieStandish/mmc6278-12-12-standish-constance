@@ -37,6 +37,16 @@ class Word {
     }
   }
 
+  //Helper function to replace underscores
+  replaceUnderscores(index, letter) {
+    let showAnswers = this.displayWord
+    if (index < this.displayWord.length){
+      showAnswers = this.displayWord.substring(0, index) + letter + this.displayWord.substring(index + 1)
+    }
+    this.displayWord = showAnswers
+    return
+  }
+
   // implement the updateScreen function:
   // updateScreen() {}
   updateScreen() {
