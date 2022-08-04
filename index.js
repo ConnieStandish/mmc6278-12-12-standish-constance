@@ -53,8 +53,13 @@ class Word {
   }
 
   // implement the updateScreen function:
-  // updateScreen() {}
   updateScreen() {
+    let wordToGuess = document.getElementById('word-to-guess')
+    wordToGuess.textContent = this.displayWord
+    let guessEL = document.getElementById('remaining-guesses')
+    guessEL.textContent = this.remainingGuesses
+    let wrongGuessEl = document.getElementById('incorrect-letters')
+    wrongGuessEl.textContent = this.incorrectLetters
   }
 
   // implement the isGameOver function:
